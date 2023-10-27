@@ -13,7 +13,8 @@ def index():
         message = generate_prompt(prompt)
         completion = client.chat.completions.create(
             model="gpt-3.5-turbo", 
-            messages=message)
+            messages=message,
+            temperature=0)
         
         return redirect(url_for("index", result=completion.choices[0].message.content))
 
