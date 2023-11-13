@@ -31,4 +31,4 @@ def after_request(response):
 # completion = await client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
 
 def generate_prompt(prompt):
-    return [{"role": "user", "content": "Translate the following using only hiragana / katakana:{}".format(prompt.capitalize())}]
+    return [{"role": "user", "content": "Translate the following using only hiragana / katakana:{}".format(prompt.capitalize())}] 
