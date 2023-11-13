@@ -1,0 +1,9 @@
+name:  quickstart-kana
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11.5
+  - openai=1.0.0
+  - flask=3.0
+
