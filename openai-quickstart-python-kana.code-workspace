@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.analysis.typeCheckingMode": "strict",
+		"window.zoomLevel": 0,
+		"editor.formatOnSaveMode": "file",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		},
+		"python.linting.pylintEnabled": true
+	}

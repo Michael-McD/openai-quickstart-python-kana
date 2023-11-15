@@ -64,3 +64,11 @@ input[type="submit"] {
   font-weight: bold;
   margin-top: 40px;
 }
+.version {
+  font-weight: bold;
+  margin-top: 40px;
+}
+.http {
+  font-weight: bold;
+  margin-top: 40px;
+}

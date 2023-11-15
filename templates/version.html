@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <title>OpenAI Quickstart</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='dog.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='dog.png') }}" class="icon" />
+  <h3>English to Kana (Hiragana and/or Katakana)</h3>
+  
+  {% if version %}
+  <div class="version">{{ version }}</div>
+  {% endif %}
+
+  {% if http %}
+  <div class="version">{{ http }}</div>
+  {% endif %}
+
+</body>

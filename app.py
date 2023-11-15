@@ -20,6 +20,12 @@ def index():
 
     result = request.args.get("result")
     return render_template("index.html", result=result)
+5
+@app.route("/version", methods=["GET"])
+def version():
+    app = "0.1.0"
+    http = request.environ.get('SERVER_PROTOCOL')
+    return render_template("version.html", version=app, http=http)
 
 @app.after_request
 def after_request(response):

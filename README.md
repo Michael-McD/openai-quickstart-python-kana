@@ -17,8 +17,8 @@ This is an example pet name generator app used in the OpenAI API [quickstart tut
 4. Create a new virtual environment:
 
    ```bash
-   $ conda create --prefix ./.env python=3.11.5
-   $ conda activate ./.env
+   $ conda create --name quickstart-kana python=3.11.5 openai flask
+   $ conda activate quickstart-kana
    ```
 
 5. Install the requirements:
