@@ -1,7 +1,5 @@
-import os
-
+from flask import Flask, redirect, render_template, request, url_for
 from openai import OpenAI
-from flask import Flask, redirect, render_template, request, url_for, json
 
 app = Flask(__name__)
 client = OpenAI()
@@ -13,28 +11,19 @@ def index():
         message = generate_prompt(prompt)
         completion = client.chat.completions.create(
             model="gpt-3.5-turbo", 
-            messages=message,
-            temperature=0)
+            messages=message, # type: ignore
+            temperature=1)
         
         return redirect(url_for("index", result=completion.choices[0].message.content))
 
     result = request.args.get("result")
     return render_template("index.html", result=result)
-5
+
 @app.route("/version", methods=["GET"])
 def version():
     app = "0.1.0"
     http = request.environ.get('SERVER_PROTOCOL')
     return render_template("version.html", version=app, http=http)
 
-@app.after_request
-def after_request(response):
-    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate, public, max-age=0"
-    response.headers["Expires"] = '0'
-    response.headers["Pragma"] = "no-cache"
-    return response
-
-# completion = await client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
-
-def generate_prompt(prompt):
+def generate_prompt(prompt: str): 
     return [{"role": "user", "content": "Translate the following using only hiragana / katakana:{}".format(prompt.capitalize())}] 
