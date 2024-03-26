@@ -1,6 +1,6 @@
 # OpenAI API Kanji to Kana - Python example app
 
-This is an example Japanese Kanji to Kana generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework. Check out the tutorial or follow the instructions below to get set up.
+This is a Japanese Kanji to Kana generator app based on the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework. Check out the tutorial or follow the instructions below to get set up.
 
 ## Setup
 
@@ -14,7 +14,7 @@ This is an example Japanese Kanji to Kana generator app used in the OpenAI API [
    $ cd openai-quickstart-python-kana
    ```
 
-4. Create a new virtual environment:
+4. Create a new virtual environment (I've used [Miniconda](https://docs.anaconda.com/free/miniconda/index.html) to do this.):
 
    ```bash
    $ conda create --name quickstart-kana python=3.11.5 openai flask
